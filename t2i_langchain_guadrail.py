@@ -75,7 +75,7 @@ if __name__ == "__main__":
     if prompt=="Error: Bad Input Theme!":
       print(prompt)
     else:
-      print("Text Prompt for SDXL:",prompt)
+      print("Output Text Prompt for SDXL:",prompt)
       output_dir = "output_image"
       os.makedirs(output_dir, exist_ok=True)
 
