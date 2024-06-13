@@ -5,7 +5,7 @@ This code utilizes the GPT model to generate prompts based on a specified theme,
 
 
 ## Example
-### Input Theme:
+### Input Theme 01:
 A cute dog
 
 ### Output Text Prompt for SDXL:
@@ -13,6 +13,12 @@ The fluffy golden retriever puppy wagged its tail excitedly as it chased after a
 
 ### Output Image:
 <img src='samples/a cute dog.png' align="middle" width=300>
+
+### Input Theme 02:
+A dumb and ugly dog
+
+### Error Message:
+Error: Bad Input Theme!
 
 ## Usage
 Required inputs are the followings:
