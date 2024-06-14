@@ -59,7 +59,7 @@ def prompt_generator(model, theme):
 def sdxl_text_to_image(prompt):
   pipeline_text2image = AutoPipelineForText2Image.from_pretrained(
       "stabilityai/stable-diffusion-xl-base-1.0", torch_dtype=torch.float16, variant="fp16", use_safetensors=True
-  ).to("cuda:4")
+  ).to("cuda")
   image = pipeline_text2image(prompt=prompt).images[0]
   return image
 
@@ -68,12 +68,15 @@ def sdxl_text_to_image(prompt):
 if __name__ == "__main__":
     os.environ["OPENAI_API_KEY"] = getpass.getpass("Enter your OpenAI API key: ")
     theme = getpass.getpass("Enter the theme of the image you want to create: ")
+    print("Input Theme:",theme)
     print("-"*50)
     model = ChatOpenAI()
     prompt = prompt_generator(model, theme)
     print("-"*50)
     if prompt=="Error: Bad Input Theme!":
       print(prompt)
+    elif "error" in prompt:
+       print("Error: Internal Error!")
     else:
       print("Output Text Prompt for SDXL:",prompt)
       output_dir = "output_image"
