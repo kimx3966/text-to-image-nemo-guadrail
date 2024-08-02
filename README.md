@@ -1,5 +1,5 @@
 # Text Prompt and Image Generation using LangChain and NeMo Guardrails
-> One of the Top 100 Projects in the Generative AI Agents Developer Contest by NVIDIA and LangChain
+> Global Top 100 Projects in the Generative AI Agents Developer Contest by NVIDIA and LangChain
 ### Overview:
 <img src='samples/overview.png' align="middle" width=800>
 This code utilizes the GPT model to generate prompts based on a specified theme, and then uses the SDXL model to produce images from these prompts. If the input includes inappropriate content, such as suggestive material or profanity, it triggers an error message. This entire functionality is implemented using LangChain and NeMo Guardrails.
